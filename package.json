@@ -70,5 +70,18 @@
     "prettier": "2.2.1",
     "ts-jest": "^26.5.4",
     "typescript": "4.1.3"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./jest.setup.js"
+    ],
+    "testMatch": [
+      "**/*.test.ts",
+      "**/*.test.tsx"
+    ],
+    "verbose": true,
+    "moduleNameMapper": {
+      "^~/(.*)": "<rootDir>/src/$1"
+    }
   }
 }
