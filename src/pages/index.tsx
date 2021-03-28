@@ -1,5 +1,7 @@
+import { Box } from '@chakra-ui/react'
 import Head from 'next/head'
 
+import { Counter } from '@/components/jestDemo/Counter'
 import { Layout } from '@/components/layout'
 
 const Home = () => {
@@ -17,6 +19,9 @@ const Home = () => {
       >
         Button
       </button>
+      <Box mt={30}>
+        <Counter />
+      </Box>
     </Layout>
   )
 }
