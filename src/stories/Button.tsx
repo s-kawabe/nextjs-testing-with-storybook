@@ -1,6 +1,5 @@
+/* eslint-disable react/prop-types */
 import './button.css'
-
-import React from 'react'
 
 export interface ButtonProps {
   /**
@@ -28,6 +27,7 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
+// eslint-disable-next-line react/destructuring-assignment
 export const Button: React.FC<ButtonProps> = ({
   primary = false,
   size = 'medium',

@@ -42,14 +42,16 @@ Props や State に任意の値を入れてコンポーネントの整合成を�
 
 1. インストールモジュール
 
-```
-yarn add jest ts-jest @testing-library/react @storybook/addon-storyshots @types/jest --dev
-```
-
-and more?
+## jest,testing-library 関連
 
 ```
-yarn add @testing-library/react-hooks @testing-library/jest-dom react-test-renderer react-dom
+yarn add jest babel-jest jest-watch-typeahead react-test-renderer babel-preset-react-app @types/jest @testing-library/react @testing-library/react-hooks eslint-plugin-jest
+```
+
+## storyshots
+
+```
+yarn add @storybook/addon-storyshots
 ```
 
 - @testing-library/react-hooks ： React が提供する Hooks テストのためのユーティリティ・ヘルパー
@@ -115,6 +117,19 @@ jest の以下の設定を見直す。
 # practice
 
 ## storyshots を用いたスナップショットテスト
+
+[公式](https://storybook.js.org/docs/react/workflows/snapshot-testing) <br>
+[GitHub Repo](https://github.com/storybookjs/storybook/blob/master/addons/storyshots/storyshots-core/README.md#configure-your-app-for-jest/README.md)
+
+1. ./test/storyshots/storybook.test.ts を作成する
+
+```ts
+import initStoryshots from '@storybook/addon-storyshots'
+
+initStoryshots()
+```
+
+2. npx sb init で作成済みの初期 story 達に対して、yarn test を実行してみる
 
 ## 同期的カウンターコンポーネントテスト(基本の構文)
 
