@@ -120,18 +120,7 @@ jest の以下の設定を見直す。
 
 [公式](https://storybook.js.org/docs/react/workflows/snapshot-testing) <br>
 [GitHub Repo](https://github.com/storybookjs/storybook/blob/master/addons/storyshots/storyshots-core/README.md#configure-your-app-for-jest/README.md)
-
-1. ./test/storyshots/storybook.test.ts を作成する
-
-```ts
-import initStoryshots from '@storybook/addon-storyshots'
-
-initStoryshots()
-```
-
-2. npx sb init で作成済みの初期 story 達に対して、yarn test を実行してみる
-
-## 同期的カウンターコンポーネントテスト(基本の構文)
+[セットアップ方法](https://blog.gaji.jp/2020/08/18/4783/)
 
 ```tsx
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
