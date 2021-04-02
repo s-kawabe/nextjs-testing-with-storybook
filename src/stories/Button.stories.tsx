@@ -20,7 +20,7 @@ const Template: Story<ButtonProps> = (args) => {
 export const Primary = Template.bind({})
 Primary.args = {
   primary: true,
-  label: 'Button',
+  label: 'Button hoge',
 }
 
 export const Secondary = Template.bind({})

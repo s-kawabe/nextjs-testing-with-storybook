@@ -122,6 +122,12 @@ jest の以下の設定を見直す。
 [GitHub Repo](https://github.com/storybookjs/storybook/blob/master/addons/storyshots/storyshots-core/README.md#configure-your-app-for-jest/README.md)
 [セットアップ方法](https://blog.gaji.jp/2020/08/18/4783/)
 
+- jest と Storybook が正常に動くことを確認する
+- `jest.config.js`と`jest.storyshots.config.js`を分けて設定しておく。
+- npm scripts に`storyshots`を設定する
+- yarn storyshots でスナップショットテストが自動でできる。
+- コンポーネント編集後、yarn storyshots での差分が正しい場合は`yarn storushots --updateSnapshot`を実行する
+
 ```tsx
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 

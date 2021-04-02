@@ -5,5 +5,5 @@ module.exports = {
   ...baseConfig,
   name: 'Storyshots',
   displayName: 'storyshots',
-  testMatch: ['<rootDir>/Storyshots.test.ts'],
+  testMatch: ['<rootDir>/test/Storyshots.test.ts'],
 }
