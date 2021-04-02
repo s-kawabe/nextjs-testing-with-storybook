@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 
-import { Counter } from './Counter'
+import { Counter } from '@/components/Counter'
 
 // Counterというテストグループ名の記載
 describe('Counter', () => {

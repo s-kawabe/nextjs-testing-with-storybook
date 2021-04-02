@@ -49,7 +49,7 @@ yarn add jest ts-jest @testing-library/react @storybook/addon-storyshots @types/
 and more?
 
 ```
-yarn add @testing-library/react-hooks @testing-library/jest-dom react-test-renderer
+yarn add @testing-library/react-hooks @testing-library/jest-dom react-test-renderer react-dom
 ```
 
 - @testing-library/react-hooks ： React が提供する Hooks テストのためのユーティリティ・ヘルパー
@@ -65,7 +65,7 @@ yarn add @testing-library/react-hooks @testing-library/jest-dom react-test-rende
 2. Storybook によるスナップショットテスト
 
 **@storybook/addon-storyshots**を使用する。
-これが storybook 本体のバージョンを一致していることを確認する。
+これが storybook 本体のバージョンを一致していることを確認する。後述する
 
 ## jest の設定
 
@@ -96,6 +96,19 @@ import fetch from 'node-fetch'
 
 if (!globalThis.fetch) {
   globalThis.fetch = fetch
+}
+```
+
+## .test ファイルで alias import をしたい時
+
+初期状態の`.test`ファイルでは、tsconfig.json で指定した alias のパス指定で
+コンポーネントを import すると test が FAIL してしまうので
+jest の以下の設定を見直す。
+
+```json
+// "@/" でsrc以下の~ という設定
+"moduleNameMapper": {
+  "^@/(.*)": "<rootDir>/src/$1"
 }
 ```
 
@@ -134,3 +147,6 @@ describe('Counter', () => {
   })
 })
 ```
+
+`yarn test`でテストを実行すると`Xxx.test.tsx`ファイルがあるフォルダに
+`__snapshots__`ファイルが作成される

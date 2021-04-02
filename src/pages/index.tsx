@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import Head from 'next/head'
 
-import { Counter } from '@/components/jestDemo/Counter'
+import { Counter } from '@/components//Counter'
 import { Layout } from '@/components/layout'
 
 const Home = () => {
